@@ -42,6 +42,18 @@ public class StringToNum {
         integerMap.put("eight",8);
         integerMap.put("nine",9);
 
+        Map<String,Integer> elevenNum =new HashMap<>();
+        elevenNum.put("eleven",11);
+        elevenNum.put("twelve",12);
+        elevenNum.put("thirteen",13);
+        elevenNum.put("fourteen",14);
+        elevenNum.put("fifteen",15);
+        elevenNum.put("sixteen",16);
+        elevenNum.put("seventeen",17);
+        elevenNum.put("eighteen",18);
+        elevenNum.put("nineteen",19);
+
+
         int resultNum=0;
 
         String[] numData = numberData.toLowerCase().split(" ");
@@ -55,7 +67,9 @@ public class StringToNum {
                 resultNum =resultNum+ doubleDigit.get(words);
             } else if (integerMap.containsKey(words)) {
                 resultNum=resultNum+integerMap.get(words);
-            }else {
+            } else if (elevenNum.containsKey(numberData)) {
+                resultNum=elevenNum.get(words);
+            } else {
                 System.out.println("Invalid Input : ");
                 return -1;
             }
