@@ -4,7 +4,7 @@ public class ArrayRotation {
     public static void main(String[] args) {
 
         int[] array={1,2,3,4,5,6,7,8,9,10};
-        int rotateBy =2;
+        int rotateBy =4;
 
         System.out.println("Before Rotate");
         arrayPrint(array);
@@ -25,7 +25,7 @@ public class ArrayRotation {
     }
 
     private static void leftArray(int[] array, int rotateBy) {
-        int fact= rotateBy%array.length;
+        int fact= rotateBy;
         int len = array.length;
         reverseArray(array,0,fact-1); //reverse first k elements
         reverseArray(array,fact,len-1); //reverse remaining elements

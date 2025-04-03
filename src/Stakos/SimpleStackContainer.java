@@ -29,13 +29,17 @@ class Stack{
 
     public void printStackos() {
         for(int i=top;i>=0;i--){
-            System.out.println(arr[i]);
+            System.out.print(arr[i]+" ");
         }
     }
 
     public int pop() {
         if (isEmpty()) System.out.println("stack is empty");
         return arr[top--];
+    }
+
+    public int peek(){
+        return arr[top];
     }
 }
 
@@ -51,9 +55,14 @@ public class SimpleStackContainer {
         stack.push(8);
         stack.push(10);
         stack.push(11);
-        //stack.pop();
-
+        System.out.println("After pushing :");
         stack.printStackos();
+        System.out.println();
+        stack.pop();
+        System.out.println("After pop :");
+        stack.printStackos();
+        System.out.println();
+        System.out.println("This is top element: "+stack.peek());
 
     }
 }
