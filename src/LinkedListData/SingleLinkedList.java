@@ -1,6 +1,8 @@
 package LinkedListData;
 
 
+import java.util.Stack;
+
 class Node{
     int data;
     Node next;
@@ -26,14 +28,42 @@ public class SingleLinkedList {
        linkedList.inLast(400);
        linkedList.inLast(500);
        linkedList.displayList();
-       linkedList.deletFront();
+       //linkedList.deletFront();
         System.out.println();
         System.out.print("*****************");
         System.out.println();
         linkedList.displayList();
-        linkedList.deletLast();
-       linkedList.atPostition(1000,4);
+       // linkedList.deletLast();
+        System.out.println();
+        System.out.println("ReverseList: ");
+       // linkedList.reverseList();
+        linkedList.printReverse(linkedList.head);
+        linkedList.atPostition(1000,4);
 
+    }
+
+    private void printReverse(Node head) {
+        if (head==null){
+            return ;
+        }
+        printReverse(head.next);
+        System.out.print(head.data+"<--------");
+
+    }
+
+    private void reverseList() {
+        Stack<Integer> stack=new Stack<>();
+        Node current=head;
+        while (current!=null){
+            stack.push(current.data);
+            current=current.next;
+        }
+
+        while(!stack.isEmpty()){
+            System.out.print(stack.pop()+"<-");
+
+        }
+        System.out.println("null");
     }
 
     private void atPostition(int data, int pos) {

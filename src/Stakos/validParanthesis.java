@@ -34,3 +34,5 @@ public class validParanthesis {
        return characterStack.isEmpty();
      }
 }
+
+
