@@ -11,6 +11,9 @@ public class Swapping {
 
     }
 
+      //a=a+b;
+      //b=a-b;
+      //a=b-a;
     private static void swapNumbersWithoutUsingThirdVariables(int first, int second) {
         first= first+second;
         second=first-second;

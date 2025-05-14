@@ -1,25 +1,26 @@
 package Mathematics;
 
+import java.util.Scanner;
+
 public class Armstrong {
     public static void main(String[] args) {
-        int number = 153;
-        System.out.println(number%10);
-        System.out.println(number/10);
+        System.out.println("enter your number : ");
+        Scanner sc =new Scanner(System.in);
+        double num=sc.nextDouble();
+        double armstrong = getArmestrong((int) num);
+        System.out.println("Armestrong Number is : "+armstrong);
+    }
 
-        int sum=0,temp, res;
+    private static double getArmestrong(int num) {
 
-        temp= number;
-        while (number>0){
-            res = number%10;
-            number=number/10;
-            sum = sum +(res * res * res );
+        double sum=0;
+        double power = String.valueOf(num).length();
+        while (num>0){
+            int digit =num%10;
+            sum=sum+Math.pow(digit,power);
+            num=num/10;
+
         }
-
-        if (temp==sum){
-            System.out.println(temp+"is armstrong number");
-        }else{
-            System.out.println(temp+"s not armstrong number");
-        }
-
+        return sum;
     }
 }
