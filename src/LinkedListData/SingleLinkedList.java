@@ -28,18 +28,33 @@ public class SingleLinkedList {
        linkedList.inLast(400);
        linkedList.inLast(500);
        linkedList.displayList();
-       //linkedList.deletFront();
+       linkedList.deletFront();
         System.out.println();
         System.out.print("*****************");
         System.out.println();
         linkedList.displayList();
-       // linkedList.deletLast();
+        linkedList.deletLast();
         System.out.println();
         System.out.println("ReverseList: ");
-       // linkedList.reverseList();
+       linkedList.reverseList();
         linkedList.printReverse(linkedList.head);
-        linkedList.atPostition(1000,4);
+        linkedList.atPosition(12030,4);
+        linkedList.displayList();
+       // System.out.println(linkedList.reversedLink(linkedList.head));
 
+    }
+
+    private Node reversedLink(Node head) {
+        Node current=head;
+        Node prev=null;
+
+        while (current!=null){
+            Node temp =current.next;
+            current.next=prev;
+            prev=current;
+            current=temp;
+        }
+        return prev;
     }
 
     private void printReverse(Node head) {
@@ -66,8 +81,21 @@ public class SingleLinkedList {
         System.out.println("null");
     }
 
-    private void atPostition(int data, int pos) {
-        
+    private void atPosition(int data, int pos) {
+        Node current=head;
+        Node newNode= new Node(data);
+        int count=0;
+
+
+
+        while (current !=null && count<pos-1){
+            current=current.next;
+            count++;
+        }
+
+        newNode.next=current.next;
+        current.next=newNode;
+
     }
 
     private void deletLast() {
@@ -126,6 +154,8 @@ public class SingleLinkedList {
         newNode.next = head;
         head = newNode;
     }
+
+
 
 
 }

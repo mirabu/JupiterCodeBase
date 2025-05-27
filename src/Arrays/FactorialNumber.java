@@ -5,6 +5,7 @@ public class FactorialNumber {
         int number= 10;
         int result = factosOfNumber(number);
         System.out.println(result);
+
     }
 
     private static int factosOfNumber(int number) {

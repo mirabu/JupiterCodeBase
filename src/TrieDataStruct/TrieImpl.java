@@ -20,6 +20,7 @@ class TrieMap{
 class Trie{
    private TrieMap root;
 
+
    Trie(){
        root=new TrieMap();
    }

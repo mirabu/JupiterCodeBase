@@ -34,7 +34,7 @@ public class ArrayRotation {
 
     }
 
-    private static void reverseArray(int[] array, int start, int end) {
+    public static void reverseArray(int[] array, int start, int end) {
         while (start < end){
             int temp = array[start];
             array[start] = array[end];
