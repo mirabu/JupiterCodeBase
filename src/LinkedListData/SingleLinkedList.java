@@ -37,7 +37,7 @@ public class SingleLinkedList {
         System.out.println();
         System.out.println("ReverseList: ");
        linkedList.reverseList();
-        linkedList.printReverse(linkedList.head);
+       // linkedList.printReverse(linkedList.head);
         linkedList.atPosition(12030,4);
         linkedList.displayList();
        // System.out.println(linkedList.reversedLink(linkedList.head));
@@ -57,14 +57,7 @@ public class SingleLinkedList {
         return prev;
     }
 
-    private void printReverse(Node head) {
-        if (head==null){
-            return ;
-        }
-        printReverse(head.next);
-        System.out.print(head.data+"<--------");
 
-    }
 
     private void reverseList() {
         Stack<Integer> stack=new Stack<>();
