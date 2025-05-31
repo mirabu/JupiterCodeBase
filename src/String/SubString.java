@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SubString {
     public static void main(String[] args) {
-        String word="Manchester";
+        String word="jugal";
         //printAllSubStirng(word);
         List<String> stringList= printAllSubStirng(word);
         System.out.println(stringList);
