@@ -9,7 +9,18 @@ public class EmployeeData {
     public static void main(String[] args) {
 
         List<EmployeeDatabase> employeeList = EmployeeFactory.getSampleEmployees();
+      //  Collections.sort(employeeList);
 
+
+        // Print table header
+        System.out.printf("%-5s %-15s %-15s %-10s%n","Name", "City", "Education","Age");
+        System.out.println("--------------------------------------------------------");
+
+        // Print each employee
+        for (EmployeeDatabase emp : employeeList) {
+            System.out.printf("%-5d %-15s %-15s %-10.2f%n",
+                    emp.getName(), emp.getCity(), emp.getEducation(), emp.getAge());
+        }
        //get all employee who are not in bench
         List<EmployeeDatabase> activeEmp = employeeList.stream()
                 .filter(emp->"No".equalsIgnoreCase(emp.getEverBenched()))

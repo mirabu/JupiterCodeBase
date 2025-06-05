@@ -1,7 +1,9 @@
 package javaHate;
 
 
-public class EmployeeDatabase {
+import java.util.Comparator;
+
+public class EmployeeDatabase implements Comparator<EmployeeDatabase> {
 
        private String name;
 
@@ -129,6 +131,18 @@ public class EmployeeDatabase {
         public String toString() {
             return name+",  "+education + ", " + city + ", " + age;
         }
+
+    @Override
+    public int compare(EmployeeDatabase o1, EmployeeDatabase o2) {
+        return 0;
     }
+
+    /*@Override
+    public int compareTo(EmployeeDatabase employeeDatabase) {
+        return this.getJoiningYear()-employeeDatabase.getJoiningYear();
+    }
+*/
+
+}
 
 
