@@ -27,5 +27,6 @@ public class TwoSum {
             integerMap.put(sumArray[i],i);
         }
         throw new IllegalArgumentException("No sum");
+
     }
 }

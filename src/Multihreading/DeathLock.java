@@ -28,7 +28,7 @@ public class DeathLock {
         Thread thread2= new Thread(invoice);
         thread2.setName("b");
         thread1.start();
-        thread1.join(1000);
+        thread1.join(5000);
         thread1.isAlive();
         thread2.start();
 
