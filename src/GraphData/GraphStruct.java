@@ -26,10 +26,10 @@ class GraphD{
     }
 
     public void printGraph(){
-        for (Map.Entry<Integer,List<Integer>> entry : adjList.entrySet()){
+        for (var entry : adjList.entrySet()){
             System.out.print(entry.getKey()+"->");
 
-            for (Integer linkData : entry.getValue()){
+            for (var linkData : entry.getValue()){
                 System.out.print(linkData+" ");
             }
             System.out.println();

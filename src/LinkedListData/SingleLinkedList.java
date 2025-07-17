@@ -1,6 +1,9 @@
 package LinkedListData;
 
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Stack;
 
 class Node{
@@ -135,10 +138,25 @@ public class SingleLinkedList {
 
     private void displayList() {
         Node current=head;
+        Map<Integer,Node> linkedMap = new LinkedHashMap<>();
         while(current != null){
             System.out.print("<-"+ current.data);
+            linkedMap.put(current.data,current.next);
             current=current.next;
         }
+        System.out.println();
+        System.out.println("map lnkedlist");
+        for (var entry : linkedMap.entrySet()) {
+            System.out.print(entry.getKey() + " -> ");
+            if (entry.getValue() != null) {
+                System.out.println(entry.getValue().data);
+            } else {
+                System.out.println("null");
+            }
+        }
+
+
+
 
     }
 

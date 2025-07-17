@@ -47,7 +47,7 @@ public class StreamFifa {
                         Comparator.comparing(EmployeeDatabase::getJoiningYear)
                                 .thenComparing(EmployeeDatabase::getAge)
                 )
-                .collect(Collectors.toList());
+                .toList();
 
 
         //List all employees who are females, above 30 years and are married.

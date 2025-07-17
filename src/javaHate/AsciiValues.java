@@ -14,6 +14,8 @@ public class AsciiValues {
 
         List<Character> characterList = asciiValues.stream().map(c -> (char) (int) c)
                 .collect(Collectors.toList());
+
+
         System.out.println(characterList);
         System.out.println();
         System.out.println("***********************");
